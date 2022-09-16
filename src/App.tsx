@@ -9,7 +9,7 @@ import CreateMeeting from './page/CreateMeeting';
 
 function App() {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-full h-full">
       <Navbar />
       <CreateMeeting />
     </div>
