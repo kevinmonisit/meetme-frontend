@@ -3,7 +3,7 @@ import Tile from './Tile';
 
 function Collaborators() {
   return (
-    <Tile title="Collaborators" >
+    <Tile title='Collaborators' >
       <div>A</div>
     </Tile>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
 import CreateMeeting from './page/CreateMeeting';
 
 // Todo:
@@ -9,7 +9,7 @@ import CreateMeeting from './page/CreateMeeting';
 
 function App() {
   return (
-    <div className="w-full h-full">
+    <div className='w-full h-fit lg:h-full flex flex-col'>
       <Navbar />
       <CreateMeeting />
     </div>

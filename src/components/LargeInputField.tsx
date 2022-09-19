@@ -5,7 +5,12 @@ interface LargeInputFieldProps {
 }
 
 function LargeInputField(props: LargeInputFieldProps) {
-
+  const { label } = props;
+  return (<div>
+    <div className='text-gray-600 font-bold'>
+      {label}
+    </div>
+  </div>);
 };
 
 export default LargeInputField;

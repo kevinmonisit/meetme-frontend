@@ -1,10 +1,10 @@
 import React from "react";
 
-interface NavbarButton {
+interface NavbarButtonProps {
   text: string;
 }
 
-function NavbarButton(props: NavbarButton) {
+function NavbarButton(props: NavbarButtonProps) {
   const { text } = props;
 
   return <div>{text}</div>;
