@@ -50,7 +50,7 @@ function CreateMeeting() {
               />
             </Tile>
           </div>
-          <div className='w-auto sm:w-1/2 xl:w-auto'>
+          <div className='w-auto sm:w-1/2 xl:w-auto -mt-2 sm:mt-0 xl:-mt-2'>
             <Tile title='Location'>
               <TextField
                 label='standard' variant='standard'
@@ -95,7 +95,7 @@ function CreateMeeting() {
           </Tile>
         </div>
         <div
-          className='flex flex-col sm:flex-row xl:flex-col items-stretch'
+          className='flex flex-col sm:flex-row xl:flex-col items-stretch mb-16 xl:mb-0'
           style={{
 
             minWidth: '25rem'
@@ -105,7 +105,7 @@ function CreateMeeting() {
             <CollaboratorsContainer />
             <div className='flex justify-center space-x-4 items-start mt-3'>
               <TextField label='standard' variant='standard' fullWidth />
-              <Button text='Invite' red />
+              <Button text='+&nbsp;Invite' red />
             </div>
           </Tile>
           <div className='flex flex-col'>

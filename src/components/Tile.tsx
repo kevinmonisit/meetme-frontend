@@ -19,7 +19,7 @@ function Tile(props: TileProps) {
       className={`
       bg-white
       px-8 py-5
-      shadow-md
+      shadow-sm
       ${verticallyCenter ? 'flex flex-col justify-center' : ''}
       rounded-md mx-2 my-2 ${fullHeight ? 'h-full' : ''}
       ${grow ? 'grow' : ''}`}

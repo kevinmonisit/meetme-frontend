@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 interface CollaboratorMetadata {
   name: string;
@@ -22,27 +23,45 @@ function CollaboratorsContainer() {
       profileColor: 'blue',
     };
 
-    setCollaborators([jane, john, { ...jane }]);
+    setCollaborators([jane, john,
+      { ...jane }, { ...john }, { ...john }, { ...john },
+
+    ]);
 
   }, []);
 
   return (
     <div
-      className='w-full h-72 bg-gray-400 rounded-lg grid grid-cols-2 auto-rows-min grid-flow-col'
+      className='w-full h-72 rounded-lg grid grid-cols-2 auto-rows-min mt-2'
     >
       {
         collaborators.map((collaborator) => (
           <div
-            className='w-full bg-gray-900 border-red-100 border-2 border-solid
-            text-white max-h-fit flex flex-row'
+            className='w-full text-gray-600 max-h-fit
+             flex flex-row col-span-1 row-span-1 items-center'
             key={collaborator.netID}>
             <div
-              className='rounded-full w-4 h-4'
+              className='rounded-full w-8 h-8 bg-red-500 m-2'
               style={{
                 backgroundColor: collaborator.profileColor,
               }}
             />
-            {collaborator.name}
+            <div className='flex flex-col w-fit mt-2'>
+              <div>{collaborator.name}</div>
+              <div
+                className='text-gray-500 text-xs ml-0.5'
+              >
+                {collaborator.netID}
+              </div>
+            </div>
+            <span className='ml-10'>
+              <HighlightOffIcon
+                className='text-gray-400'
+                sx={{
+
+
+                }} />
+            </span>
           </div>
         ))
       }
