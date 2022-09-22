@@ -9,7 +9,7 @@ import CreateMeeting from './page/CreateMeeting';
 
 function App() {
   return (
-    <div className='w-full h-fit lg:h-full flex flex-col'>
+    <div className='w-full h-fit xl:h-full flex flex-col'>
       <Navbar />
       <CreateMeeting />
     </div>

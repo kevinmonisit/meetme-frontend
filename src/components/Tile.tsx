@@ -6,19 +6,21 @@ interface TileProps {
   children: React.ReactNode;
   fullHeight?: boolean;
   grow?: boolean;
-
+  verticallyCenter?: boolean;
 }
 
 function Tile(props: TileProps) {
   const {
-    title, subtitle, children, fullHeight, grow,
+    title, subtitle, children, fullHeight, grow, verticallyCenter
   } = props;
 
   return (
     <div
       className={`
       bg-white
-      px-10 py-5
+      px-8 py-5
+      shadow-md
+      ${verticallyCenter ? 'flex flex-col justify-center' : ''}
       rounded-md mx-2 my-2 ${fullHeight ? 'h-full' : ''}
       ${grow ? 'grow' : ''}`}
     >
@@ -41,6 +43,7 @@ Tile.defaultProps = {
   subtitle: '',
   fullHeight: false,
   grow: false,
+  verticallyCenter: false,
 };
 
 export default Tile;

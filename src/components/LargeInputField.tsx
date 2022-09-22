@@ -1,16 +1,20 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/forbid-prop-types */
+import { TextField, withStyles } from "@mui/material";
+import { purple } from "@mui/material/colors";
+import React from "react";
 
-interface LargeInputFieldProps {
-  label: string;
+
+function LargeTextField(props: { classes: any; }) {
+  const { classes } = props;
+
+  return (
+    <TextField
+      label='Custom CSS'
+      variant='outlined'
+      id='custom-css-outlined-input'
+    />
+  );
 }
 
-function LargeInputField(props: LargeInputFieldProps) {
-  const { label } = props;
-  return (<div>
-    <div className='text-gray-600 font-bold'>
-      {label}
-    </div>
-  </div>);
-};
-
-export default LargeInputField;
+export default LargeTextField;
