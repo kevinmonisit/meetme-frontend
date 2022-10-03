@@ -11,6 +11,8 @@ import ErrorPage from "./routes/error-page";
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import CreateMeeting from './page/CreateMeeting';
+import MyMeets from './routes/my-meets';
+import Meet from './routes/meet';
 
 const theme = createTheme({
   typography: {
@@ -31,8 +33,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "about",
-    element: <div>About</div>,
+    path: "my-meets",
+    element:
+      <>
+        <Navbar />
+        <MyMeets />
+      </>,
+  },
+  {
+    path: "meet",
+    element:
+      <>
+        <Navbar />
+        <Meet />
+      </>,
   },
 ]);
 
